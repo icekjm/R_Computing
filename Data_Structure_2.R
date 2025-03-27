@@ -28,5 +28,24 @@ ary1[1,1,]
 ary1[1,,-2]
 length(ary1)
 mode(ary1)
+#리스트
+a = 1:10
+(b = 11:15)
+klist = list(vec1=a, vec2=b, description="example")
+length(klist)
+mode(klist)
+names(klist)
+list1 = list("A", 1:8)
+list1[[3]] = list(c(T,F))
+list1[[2]][9] = 9
+list1[[3]] = NULL
+list1[[2]] = list1[[2]][-9]
+#리스트의 생성
+a = 1:10
+b = 11:15
+nlist = list(vec1=a, vec2=b, descrip="example")
+nlist[[2]][5]
+nlist$vec2[c(2,3)]
+
 
 
