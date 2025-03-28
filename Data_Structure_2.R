@@ -46,6 +46,21 @@ b = 11:15
 nlist = list(vec1=a, vec2=b, descrip="example")
 nlist[[2]][5]
 nlist$vec2[c(2,3)]
-
+#데이터 프레임의 생성
+d2 = read.table("C:\\data\\R_data\\story.txt", row.names='num', header = T)
+char1 = rep(LETTERS[1:3], c(2,2,1))
+num1 = rep(1:3,c(2,2,1))
+test1 = data.frame(char1, num1)
+a1 = c("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o")
+dim(a1) = c(5,3)
+#행렬을 데이터프레임으로 변환
+test3 = as.data.frame(a1)
+(cbind(test1, test3))
+char1 = rep(LETTERS[1:3], c(1,2,2))
+num1 = rep(1:3, c(1,1,3))
+test4 = data.frame(char1, num1)
+(rbind(test1, test4))
+#merge의 쓰임???
+merge(test1, test4)
 
 
